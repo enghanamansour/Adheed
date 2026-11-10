@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://adheed.vercel.app"><b>Try the live demo</b></a> ·
-  <a href="docs/report/Adeed_Report.pdf"><b>Read the project report (PDF)</b></a> ·
+  <a href="Adeed_Report.pdf"><b>Read the project report (PDF)</b></a> ·
   <a href="#technical-documentation"><b>Technical docs</b></a>
 </p>
 
@@ -30,7 +30,7 @@ A glucose-sensor report packs time in range, GMI, variability and more onto a si
 - One person in a public diabetes forum wrote: *"I'm confused because the numbers on the left don't seem to match the graphics on the right."* ([diabetes.co.uk](https://www.diabetes.co.uk/forum/threads/ambulatory-glucose-profile.184023/page-2))
 - A 2026 study of Saudi adults with type 2 diabetes who use glucose-monitoring devices found *"a significant knowledge gap"* about hypoglycaemia awareness and management, and called for educational and technological solutions. ([Bahrain Medical Bulletin](https://bahrainmedicalbulletin.com/March2026/Abstracts/BMB-25-1069-ABSTRACT.pdf))
 
-These are signals, not proof. How widespread the need is remains a research question, and the [project report](docs/report/Adeed_Report.pdf) says so openly.
+These are signals, not proof. How widespread the need is remains a research question, and the [project report](Adeed_Report.pdf) says so openly.
 
 ## What Adeed does
 
