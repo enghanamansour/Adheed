@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://adheed.vercel.app"><b>Try the live demo</b></a> ·
   <a href="Adeed_Report.pdf"><b>Read the project report (PDF)</b></a> ·
+  <a href="Adeed_Presentation.pdf"><b>View the presentation</b></a> ·
   <a href="#technical-documentation"><b>Technical docs</b></a>
 </p>
 
