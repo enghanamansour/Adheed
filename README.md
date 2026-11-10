@@ -1,4 +1,96 @@
-# Adeed (عضيد) — Arabic-first diabetes report assistant
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Adeed logo" width="320">
+</p>
+
+<h2 align="center">Your diabetes report, finally in plain Arabic.</h2>
+
+<p align="center">
+  عضيد: افهم تقرير السكر واستعد لموعدك بثقة
+</p>
+
+<p align="center">
+  <a href="https://adheed.vercel.app"><b>Try the live demo</b></a> ·
+  <a href="docs/report/Adeed_Report.pdf"><b>Read the project report (PDF)</b></a> ·
+  <a href="#technical-documentation"><b>Technical docs</b></a>
+</p>
+
+<p align="center">
+  <img src="docs/assets/02-home.png" alt="Adeed home: time in range and key numbers" width="170">
+  <img src="docs/assets/04-questions.png" alt="Suggested questions for the doctor" width="170">
+  <img src="docs/assets/05-assistant.png" alt="The assistant explaining without giving a dose" width="170">
+  <img src="docs/assets/06-appointment.png" alt="Appointment preparation summary" width="170">
+</p>
+
+---
+
+## The problem
+
+A glucose-sensor report packs time in range, GMI, variability and more onto a single page. Many people leave the clinic with a report they cannot read and a visit they did not prepare for.
+
+- One person in a public diabetes forum wrote: *"I'm confused because the numbers on the left don't seem to match the graphics on the right."* ([diabetes.co.uk](https://www.diabetes.co.uk/forum/threads/ambulatory-glucose-profile.184023/page-2))
+- A 2026 study of Saudi adults with type 2 diabetes who use glucose-monitoring devices found *"a significant knowledge gap"* about hypoglycaemia awareness and management, and called for educational and technological solutions. ([Bahrain Medical Bulletin](https://bahrainmedicalbulletin.com/March2026/Abstracts/BMB-25-1069-ABSTRACT.pdf))
+
+These are signals, not proof. How widespread the need is remains a research question, and the [project report](docs/report/Adeed_Report.pdf) says so openly.
+
+## What Adeed does
+
+| | Step | What you get |
+|---|---|---|
+| 1 | **Upload** a glucose-report PDF | The numbers are extracted with the source page of every value |
+| 2 | **Understand** it | Plain-language results against general targets, with uncertain values flagged instead of hidden |
+| 3 | **Compare** it | Only against earlier reports that are truly comparable. GMI and HbA1c are never mixed |
+| 4 | **Prepare** the visit | Suggested questions for your doctor, each with the reason, plus a one-page summary to copy or print |
+| 5 | **Ask** the assistant | Everyday diabetes questions answered in Arabic. It never diagnoses and never gives a dose |
+
+## See it
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/assets/01-entry.png" width="170"><br><sub>Inside the Sehhaty-inspired app</sub></td>
+    <td align="center"><img src="docs/assets/02-home.png" width="170"><br><sub>Time in range at a glance</sub></td>
+    <td align="center"><img src="docs/assets/03-history.png" width="170"><br><sub>History and honest comparison</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/assets/04-questions.png" width="170"><br><sub>Questions for your doctor</sub></td>
+    <td align="center"><img src="docs/assets/05-assistant.png" width="170"><br><sub>An assistant that knows its limits</sub></td>
+    <td align="center"><img src="docs/assets/06-appointment.png" width="170"><br><sub>Visit preparation summary</sub></td>
+  </tr>
+</table>
+
+All screens show synthetic demonstration data for a fictional patient.
+
+## Try it
+
+1. Open the **[live demo](https://adheed.vercel.app)** and create an account.
+2. Press **"جرّب ببيانات تجريبية"** (Try with demo data) to load three synthetic reports and an HbA1c result, or upload any PDF from `fixtures/sample-reports/`.
+3. Open each tab: reports, doctor questions, assistant, appointment, history.
+
+If the confirmation email does not arrive, the built-in email sender is limited (see Setup, step 2 below). You can run the app locally instead.
+
+## Built to be trusted
+
+- **Numbers come from code, not from AI.** Extraction, validation and comparison are deterministic and tested against all 20 sample reports.
+- **Nothing is invented.** A value is recorded only if it is found in the report; anything missing is marked *unavailable* and anything inconsistent is marked *uncertain*.
+- **The AI explains, it does not decide.** It never diagnoses, never suggests an insulin dose, and an emergency notice appears even when no AI key is configured.
+- **Your data stays yours.** Each user sees only their own reports (row-level security and private storage).
+
+## The team
+
+| Name | |
+|---|---|
+| Hana Alshamrani | هناء الشمراني |
+| Shahad Al-Muhaisin | شهد المحيسن |
+| Abdullah Al-Muzaini | عبدالله المزيني |
+| Abdullah Alharbi | عبدالله الحربي |
+
+Built in the Meta Startup Bootcamp at Tuwaiq Academy. Instructors: Eng. Lulwah Al-Yahya and Eng. Turki Al-Balawi.
+
+> **Independent prototype.** Adeed is not part of, integrated with, or endorsed by Sehhaty or the Saudi Ministry of Health. It is educational and never replaces medical care. In an emergency call **997**.
+
+---
+
+## Technical documentation
+
 
 Adeed helps a person with diabetes **understand their own diabetes reports**, **prepare for medical appointments**, and **ask everyday diabetes questions** — in Arabic (RTL) by default, with English support.
 
